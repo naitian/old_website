@@ -12,9 +12,9 @@ $("document").ready(function(){
 
 	$("#input").focus();
 
-	$(".project-frame").slick({
-		dots: true, 
-	})
+	// $(".project-frame").slick({
+	// 	dots: true, 
+	// })
 });
 
 function input(input){
@@ -33,7 +33,9 @@ function input(input){
 	else if(parsed.cmd == "ls"){
 		out = "about&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contact"
 	}
-	
+	else {
+		out = "That command is not yet supported. Try ls or open."
+	}
 
 	$("#content").append("<br>$ " + input);
 	$("#input").empty();
