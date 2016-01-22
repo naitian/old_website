@@ -5,12 +5,23 @@ $("document").ready(function(){
 			input($("#input").text());
 		}
 	});
+	if($("#overlay").css("pointer-events") == "none"){
+		$("#input").attr("contenteditable", "false");
+	}
 
 	$("#overlay").click(function(){
+		if($("#overlay").css("pointer-events") != "none"){
+			$("#input").attr("contenteditable", "true");
+		}
+		else {
+			$("#input").attr("contenteditable", "false");
+
+		}
 		$("#input").focus()
 	});
-
 	$("#input").focus();
+
+
 
 	// $(".project-frame").slick({
 	// 	dots: true, 

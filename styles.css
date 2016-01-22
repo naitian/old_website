@@ -2,7 +2,8 @@ html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
-	font-family: "Open Sans", "Verdana", "Sans-Serif"
+	font-family: "Open Sans", "Verdana", "Sans-Serif";
+	font-size: 72px;
 }
 
 .text {
@@ -11,15 +12,16 @@ html, body {
 }
 
 .text-head {
-	font-size: 5em;
+	font-size: 1rem;
 	font-weight: 300;
 	padding-left: 10%;
 	padding-top: 10%;
 }
 
 .text-body {
+	font-size: .25rem;
 	padding-left: 12%;
-	width: 25%;
+	width: 50%;
 	line-height: 200%;
 }
 
@@ -36,7 +38,7 @@ html, body {
 
 .content {
 	font-family: "VT323", "Monospaced";
-	font-size: 1.5em;
+	font-size: 24px;
 	margin: 20px;
 	background-color: #000;
 	color: #fff;
@@ -47,6 +49,7 @@ html, body {
 #content-container {
 	overflow: scroll;
 	height: 100%;
+	font-size: .33rem;
 }
 
 #content {
@@ -54,10 +57,15 @@ html, body {
 	margin-bottom: 0;
 }
 
+#content:before {
+	content: "Hello!"
+}
+
 #input {
 	display: inline;
 	margin-top: 0;
 	margin-left: -20px;
+	font-size: .33rem;
 }
 
 #overlay {
@@ -88,13 +96,13 @@ html, body {
 	opacity: .9;
 	text-align: center;
 	vertical-align: middle;
-	font-size: 5em;
+	font-size: 72px;
 	font-weight: 300;
 }
 
 #banner-text {
 	vertical-align: middle;
-	font-size:
+	font-size: 1em;
 	display: inline;
 	margin: 0;
 }	
@@ -120,6 +128,8 @@ a {
 .section {
 	height: 100%;
 	position: relative;
+	background-repeat: no-repeat;
+	background-position: right bottom;
 }
 
 
@@ -127,8 +137,6 @@ a {
 	background-image: url("img/desk.svg");
 	background-color: #2ecc71;
 	background-size: 50%;
-	background-repeat: no-repeat;
-	background-position: right bottom;
 }
 
 #projects {
@@ -139,34 +147,33 @@ a {
 	background-color: #f1c40f;
 	background-image: url("img/contact.svg");
 	background-size: 40%;
-	background-repeat: no-repeat;
-	background-position: right bottom;
 }
 
 .project-frame {
-	height: 50vh;
-	width: 50vw;
+	height: calc(80vw / 3);
+	width: 80vw;
 	position: absolute;
-	bottom: 10vh;
-	right: 10vw;
+/*	bottom: 5vh;
+*/	right: 10vw;
 	background-color: #e74c3c;
 	overflow: scroll;
+	display: flex;
 }
 
 .project-card {
 	position: relative;
 	display: inline-block;
-	width: calc(50vw / 4);
-	height: calc(50vw / 4);
+	width: calc(80vw / 4);
+	height: calc(80vw / 4);
 	background-color: #fff;
 	color: #000;
-	margin-right: calc(50vw / 18);
-	margin-top: calc(50vw / 18);
+	margin-right: calc(80vw / 16);
+	margin-top: calc(80vw / 16);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .project-card:nth-child(3n + 1) {
-	margin-left: calc(50vw / 18);
+	margin-left: calc(80vw / 18);
 }
 
 /*.project-card:hover {
@@ -182,6 +189,7 @@ a {
 }
 
 .project-card-description {
+	font-size: 16px;
 	z-index: 4;
 	width: 80%;
 	height: 80%;
@@ -208,6 +216,80 @@ a {
 }
 
 
+@media (max-width: 900px) {
+	#input, #overlay {
+		pointer-events: none;
+	}
+
+	#content:before {
+		content: "Check this out on a desktop for more cool things.";
+	}
+	.section {
+		background-size: 100% !important;
+		color: #fff;
+	}
+	#about {
+		background-image: linear-gradient(
+						      rgba(0, 0, 0, 0.5),
+						      rgba(0, 0, 0, 0.5)
+						    ), url("img/desk.svg");
+	}
+	#contact {
+		background-image: linear-gradient(
+						      rgba(0, 0, 0, 0.5),
+						      rgba(0, 0, 0, 0.5)
+						    ), url("img/contact.svg");
+	}
+	.text-body {
+		width: 80vw;
+	}
+	.text-body > a {
+		color: #3498db;
+	}
+	.project-card-description {
+		z-index: 4;
+		width: 80%;
+		height: 80%;
+		opacity: 0.5;
+		padding: 10%;
+	 	transition: all 0.2s ease-in-out;
+	 	position: absolute;
+	 	color: #fff;
+	 	background-color: #000;
+	 	overflow: scroll;
+	}
+}
+
+@media (max-height: 500px) {
+	.text-head {
+		padding-top: 0;
+	}
+}
+
+@media (max-width: 570px) {
+	html {
+		font-size: 64px;
+	}
+	.text-head {
+		width: 90%;
+	}
+
+	.project-frame {
+		height: calc(80vw/2);
+		display: table-row;
+		font-size: 0px;
+	}
+	.project-card {
+		width: calc(80vw / 3);
+		height: calc(80vw / 3);
+		margin-right: calc(80vw / 9);
+		margin-top: calc(80vw / 9);
+	}
+
+	.project-card:nth-child(2n + 1) {
+		margin-left: calc(80vw / 9);
+	}
+}
 
 
 @keyframes flicker {
