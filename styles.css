@@ -150,9 +150,10 @@ a {
 }
 
 .project-frame {
-	height: calc(80vw / 3);
+	height: 50%;
 	width: 80vw;
 	position: absolute;
+	margin-top: 10vh;
 /*	bottom: 5vh;
 */	right: 10vw;
 	background-color: #e74c3c;
@@ -168,7 +169,7 @@ a {
 	background-color: #fff;
 	color: #000;
 	margin-right: calc(80vw / 16);
-	margin-top: calc(80vw / 16);
+	margin-bottom: calc(80vw / 16);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
@@ -227,6 +228,7 @@ a {
 	.section {
 		background-size: 100% !important;
 		color: #fff;
+		background-position: bottom;
 	}
 	#about {
 		background-image: linear-gradient(
@@ -264,9 +266,15 @@ a {
 	.text-head {
 		padding-top: 0;
 	}
+	.section {
+		height: 150vh;
+	}
+	.shell {
+		height: 200vh;
+	}
 }
 
-@media (max-width: 570px) {
+@media (max-width: 640px) {
 	html {
 		font-size: 64px;
 	}
@@ -275,7 +283,6 @@ a {
 	}
 
 	.project-frame {
-		height: calc(80vw/2);
 		display: table-row;
 		font-size: 0px;
 	}
@@ -283,7 +290,7 @@ a {
 		width: calc(80vw / 3);
 		height: calc(80vw / 3);
 		margin-right: calc(80vw / 9);
-		margin-top: calc(80vw / 9);
+		margin-bottom: calc(80vw / 9);
 	}
 
 	.project-card:nth-child(2n + 1) {
