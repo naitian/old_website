@@ -139,6 +139,11 @@ a {
 	background-size: 50%;
 }
 
+/*.night {
+	background-image: url("img/desknight.svg") !important;
+	background-color: #304669 !important;
+}*/
+
 #projects {
 	background-color: #e74c3c;
 }
@@ -236,6 +241,16 @@ a {
 						      rgba(0, 0, 0, 0.5)
 						    ), url("img/desk.svg");
 	}
+
+	.night {
+		background-image: linear-gradient(
+						      rgba(0, 0, 0, 0.5),
+						      rgba(0, 0, 0, 0.5)
+						    ), url("img/desknight.svg") !important;
+		background-color: #304669 !important;
+
+	}
+
 	#contact {
 		background-image: linear-gradient(
 						      rgba(0, 0, 0, 0.5),

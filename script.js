@@ -5,6 +5,11 @@ $("document").ready(function(){
 			input($("#input").text());
 		}
 	});
+
+	var today = new Date();
+	if(today.getHours() > 20 || today.getHours() < 3)
+		$("#about").addClass("night");
+
 	if($("#overlay").css("pointer-events") == "none"){
 		$("#input").attr("contenteditable", "false");
 	}
