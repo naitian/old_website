@@ -167,13 +167,13 @@ a {
 */	right: 10vw;
 	background-color: #e74c3c;
 	overflow: scroll;
-	display: block;
+	display: flex;
+	flex-wrap: wrap;
 	font-size: 0;
 }
 
 .project-card {
 	position: relative;
-	display: inline-block;
 	width: calc(80vw / 4);
 	height: calc(80vw / 4);
 	background-color: #fff;
