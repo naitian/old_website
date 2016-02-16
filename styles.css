@@ -105,6 +105,8 @@ html, body {
 	font-size: 1em;
 	display: inline;
 	margin: 0;
+	padding: 0;
+	font-weight: 300;
 }	
 
 #nav {
