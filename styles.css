@@ -4,6 +4,7 @@ html, body {
 	height: 100%;
 	font-family: "Open Sans", "Verdana", "Sans-Serif";
 	font-size: 72px;
+	overflow-x: none;
 }
 
 .text {
@@ -304,7 +305,7 @@ a {
 	}
 
 	.project-frame {
-		display: table-row;
+		display: flex;
 		font-size: 0px;
 	}
 	.project-card {
@@ -312,10 +313,8 @@ a {
 		height: calc(80vw / 3);
 		margin-right: calc(80vw / 9);
 		margin-bottom: calc(80vw / 9);
-	}
-
-	.project-card:nth-child(2n + 1) {
-		margin-left: calc(80vw / 9);
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
 
