@@ -59,6 +59,10 @@ $("document").ready(function(){
 	// $(".project-frame").slick({
 	// 	dots: true, 
 	// })
+
+	$(".toggle-night").click(() => {
+		$("#about").toggleClass("night");
+	});
 });
 
 function input(input){
