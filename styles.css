@@ -58,14 +58,17 @@ html, body {
 }
 
 #content:before {
-	content: "Hello!"
+	content: "Hey there! Try typing 'ls' or 'open'.";
 }
 
 #input {
 	display: inline;
 	margin-top: 0;
-	margin-left: -20px;
+	/*margin-left: -20px;*/
 	font-size: .33rem;
+}
+#input:before {
+	content: "$ ";
 }
 
 #overlay {
@@ -181,6 +184,8 @@ a {
 	overflow: scroll;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
+
 	font-size: 0;
 }
 
@@ -190,7 +195,7 @@ a {
 	height: calc(80vw / 4);
 	background-color: #fff;
 	color: #000;
-	margin-right: calc(80vw / 16);
+	/*margin-right: calc(80vw / 16);*/
 	margin-bottom: calc(80vw / 16);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -236,11 +241,11 @@ a {
 	margin: 0 auto;
 }
 
-@media (min-width: 640px) {
+/*@media (min-width: 640px) {
 	.project-card:nth-child(3n + 1) {
 		margin-left: calc(80vw / 18);
 	}
-}
+}*/
 
 
 @media (max-width: 900px) {
@@ -307,7 +312,7 @@ a {
 	}
 }
 
-@media (max-width: 640px) {
+@media (max-width: 840px) {
 	html {
 		font-size: 64px;
 	}
@@ -320,15 +325,25 @@ a {
 		font-size: 0px;
 	}
 	.project-card {
-		width: calc(80vw / 3);
-		height: calc(80vw / 3);
-		margin-right: calc(80vw / 9);
+		width: calc(80vw / 2.5);
+		height: calc(80vw / 2.5);
+	/*	margin-right: calc(80vw / 9);*/
 		margin-bottom: calc(80vw / 9);
-		display: flex;
-		flex-wrap: wrap;
+		/*display: flex;
+		flex-wrap: wrap;*/
 	}
 }
 
+@media (max-width: 440px) {
+	.project-card {
+		width: calc(80vw);
+		height: calc(80vw);
+	/*	margin-right: calc(80vw / 9);*/
+		margin-bottom: calc(80vw / 9);
+		/*display: flex;
+		flex-wrap: wrap;*/
+	}
+}
 
 @keyframes flicker {
 	0% { opacity: 0.9165331272175535;}
