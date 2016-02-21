@@ -22,7 +22,6 @@ $("document").ready(function(){
 				suggestions.push(allPossible[i]);
 			}
 		}
-		// console.log(suggestions);
 		if(e.which == 9){
 			e.preventDefault();
 			if(suggestions.length == 1){
