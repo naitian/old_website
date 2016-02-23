@@ -191,8 +191,8 @@ a {
 
 .project-card {
 	position: relative;
-	width: calc(80vw / 4);
-	height: calc(80vw / 4);
+	width: calc(80vw / 3.5);
+	height: calc(80vw / 3.5);
 	background-color: #fff;
 	color: #000;
 	/*margin-right: calc(80vw / 16);*/
