@@ -31,7 +31,10 @@ $("document").ready(function () {
 	});
 
 	var today = new Date();
-	if (today.getHours() > 20 || today.getHours() < 3) $("#about").addClass("night");
+	if (!(today.getHours() > 20 || today.getHours() < 3)) {
+		$("#about").addClass("night");
+		$(".toggle-night").text("Toggle Nighttime");
+	}
 
 	if ($("#overlay").css("pointer-events") == "none") {
 		$("#input").attr("contenteditable", "false");
