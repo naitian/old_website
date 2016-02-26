@@ -161,6 +161,11 @@ a {
     background: #888;
     padding: 0 20px;
     cursor: pointer;
+    transition: padding-right .2s;
+}
+
+.toggle-night:hover {
+	padding-right: 50px;
 }
 
 #projects {

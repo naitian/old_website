@@ -33,7 +33,7 @@ $("document").ready(function () {
 	var today = new Date();
 	if ((today.getHours() > 20 || today.getHours() < 3)) {
 		$("#about").addClass("night");
-		$(".toggle-night").text("Toggle Nighttime");
+		$(".toggle-night").text("It's too dark");
 	}
 
 	if ($("#overlay").css("pointer-events") == "none") {
