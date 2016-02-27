@@ -176,6 +176,7 @@ a {
 	background-color: #f1c40f;
 	background-image: url("img/contact.svg");
 	background-size: 40%;
+	z-index: 100;
 }
 
 .project-frame {
