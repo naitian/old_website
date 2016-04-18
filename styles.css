@@ -170,6 +170,7 @@ a {
 
 #projects {
 	background-color: #e74c3c;
+	height: auto;
 }
 
 #contact {
@@ -180,9 +181,9 @@ a {
 }
 
 .project-frame {
-	height: 50%;
+	height: auto;
 	width: 80vw;
-	position: absolute;
+	margin: 0 auto;
 	margin-top: 10vh;
 	padding: 0;
 /*	bottom: 5vh;
