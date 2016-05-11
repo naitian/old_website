@@ -37,8 +37,15 @@ $('document').ready(function () {
 		if (e.which === 13) {
 			e.preventDefault();
 			input($('#input').text());
+      $('#content').scrollTop = $('#content').scrollHeight;
 		}
 	});
+
+  $('.nav-link').click( function () {
+    $.smoothScroll({
+      scrollTarget: $(this).attr('href')
+    });
+  });
 
   $('body').height($(window).height() + 60);
 
@@ -86,9 +93,6 @@ $('document').ready(function () {
 		$('#input').focus();
 	});
 	$('#input').focus();
-	// $('.project-frame').slick({
-	// 	dots: true,
-	// })
 
 	$('.toggle-night').click(function () {
 		$('#about').toggleClass('night');
